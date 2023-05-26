@@ -11,8 +11,10 @@ body {
     justify-content: space-between;
 }
 .logo{
+    position: fixed;
     margin-top: 10px;
     margin-left: 20px;
+    z-index: 3;
 }
 
 /*--------NAV----------*/
@@ -21,7 +23,6 @@ body {
     max-width: 600px;
     background: none;
     color: #000000;
-
     margin-top: 40px;
     margin-right: 20px;
 }
@@ -51,10 +52,94 @@ body {
 }
 
 /*--------NAV END----------*/
+/*--------BURGER----------*/
+#main_burger {
+    display: none;
+    top: 0;
+    right: 0;
+    position: flex;
+    align-items: center;
+    background: none;
+}
+
+#main_burger:target {
+    display: flex;
+    position: absolute;
+    background: none;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.access_aid {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 0;
+    padding-top: 40px;
+    background: white 10px 10px / 20px 20px no-repeat;
+    z-index: 1;
+}
+
+#access_nav {
+    background-color: white;
+    background-image: repeating-linear-gradient(black, black 0.5px, black 0.5px, white 5px);
+}
+
+#access_top {
+    background-image: linear-gradient(45deg, transparent 12.5px, black 12px, black 15px, transparent 0), linear-gradient(-45deg, transparent 12.5px, black 12px, black 15px, white 0);
+    z-index: 2;
+}
+ul{
+    display: block;
+    align-items: center;
+    padding: 20px;
+    padding-top: -50px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+    background: white
+}
+li{
+    width: 1028px;
+    line-height: 50px;
+    font-size: 13px;
+}
+li:hover{
+    color: #fbbc15;
+    list-style-type: none;
+}
+.li:active{
+    color: #fbbc15
+}
+.burger{
+    background: none;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 50px;
+}
+.burger:hover{
+    color: #fbbc15;
+}
+#main_burger a.activeburger{
+    color: #fbbc15;
+    text-decoration: none;
+    padding-bottom: 50px;
+    
+}
+
+/*--------BURGER END----------*/
+
+
+
+
 /*--------MAIN IMAGES----------*/
 .images{
     margin-left: 8%;
     margin-right: 8%;
+    margin-top: 6%;
 }
 .toprow, .botrow{
     display: flex;
@@ -97,17 +182,59 @@ body {
     text-align: center;
     opacity: 1;
 }
-.text {
+/*--------IMAGE OVERLAY END----------*/
+/*--------MAIN IMAGES END----------*/
+/*--------SMALL SCREEN IMAGES----------*/
+.smallimages{
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 10%
+}
+.smalltoprow, .smallmiddlerow, .smallbotrow{
+    display: none;
+    position: inline;
+    height: 270px;
+}
+.smalltopimgs, .smallmiddleimgs, .smallbotimgs{
+    width: 408px;
+    height: 270px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+/*--------IMAGE OVERLAY----------*/
+.smallcontainer {
+    position: relative;
+    width: 408px;
+}
+.smallcontainer:hover {
+    opacity: 1;
+}
+.smalloverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #454a4f;
+}
+.smalloverlay:hover{
+    opacity: 0.7;
+}
+#smalltext {
     color: white;
     font-size: 12px;
     position: absolute;
-    top: 40%;
-    left: 20px;
+    top: 48%;
+    left: 10%;
     text-align: center;
     opacity: 1;
 }
+
 /*--------IMAGE OVERLAY END----------*/
-/*--------MAIN IMAGES END----------*/
+/*--------SMALL SCREEN IMAGES END----------*/
+
 /*--------SEARCH FUNCTION----------*/
 #searchoverlay{
     position: absolute;
@@ -123,18 +250,28 @@ body {
     display: none;
     text-align: center;
     text-justify: center;
+    align-content: center;
+    justify-content: center;
 }
-#searchtext{
+.searchtext{
     color: #000000;
-    text-align: center;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     text-justify: center;
-    border: none;
-    text-decoration: underline;
-    font-size: 14px;
+    align-self: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: solid;
+    font-size: 18px;
+    resize: none;
 }
 #search{
     align-self: center;
     justify-self: center;
+    margin-left: -40px;
+    margin-top: -15px;
 }
 /*--------SEARCH FUNCTION END----------*/
 /*--------FOOTER----------*/
@@ -163,3 +300,23 @@ body {
     color: #909293
 }
 /*--------FOOTER END----------*/
+
+/*--------MEDIA QUERIES----------*/
+@media screen and (max-width: 1200px) {
+    .images, .container{
+        display: none;
+    }
+    .smalltoprow, .smallmiddlerow, .smallbotrow{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1028px) {
+    .nav, .active {
+        display: none;
+    }
+    .access_aid{
+        display:block;
+    }
+}
+/*--------MEDIA QUERIES END----------*/

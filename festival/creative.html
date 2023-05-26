@@ -25,9 +25,23 @@
         </nav>
     </div>
     <div id="searchoverlay">
-        <input id="searchtext" type="text" placeholder="Search">
+        <textarea class="searchtext" placeholder="Search" rows="1" cols="40"></textarea>
         <img id="search" src="../images/search.png" alt="search" onclick="" height="5%">
     </div>
+    <p><a href="#main_burger" id="access_nav" class="access_aid"></a></p>
+    <nav id="main_burger">
+        <ul>
+            <li><a class="activeburger" href="../index.html">Perth festival (latest work)</a>
+            <li><a class="burger" href="../branding.html">branding & marketing</a>
+            <li><a class="burger" href="../weddings/weddings.html">weddings & events</a>
+            <li><a class="burger" href="#">
+                <img src="../images/search.png" alt="search" onclick="search()">
+            </a>
+        </ul>
+        <p><a href="#body" id="access_top" class="access_aid"></a></p>
+        <script src="../index.js"></script>
+    </nav>
+    
     <div class="main_section">
         <div class="left">
             <img class="leftimgs" src="images/1.png" alt="brochures">
