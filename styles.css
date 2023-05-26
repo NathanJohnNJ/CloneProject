@@ -64,6 +64,8 @@ body {
 .topimgs, .botimgs{
     width: 408px;
     height: 270px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 /*--------IMAGE OVERLAY----------*/
 .container {
