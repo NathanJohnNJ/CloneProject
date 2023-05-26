@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Open%20Sans:400');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+.topbar{
+    display: flex;
+    position: inline;
+    justify-content: space-between;
+}
+.logo{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/*--------NAV----------*/
+#main_nav {
+    display: flex;
+    max-width: 600px;
+    background: none;
+    color: #000000;
+
+    margin-top: 40px;
+    margin-right: 20px;
+}
+#main_nav:target {
+    background: none;
+}
+.nav{
+    background: none;
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.nav:hover{
+    color: #fbbc15;
+}
+#main_nav a.active{
+    color: #fbbc15;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 10px;
+    
+}
+#main_nav a.active:hover{
+    color: #fbbc15;
+    text-decoration: none;
+}
+
+/*--------NAV END----------*/
+/*--------MAIN IMAGES----------*/
+.images{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.toprow, .botrow{
+    display: flex;
+    position: inline;
+    height: 270px;
+}
+.topimgs, .botimgs{
+    width: 408px;
+    height: 270px;
+}
+/*--------IMAGE OVERLAY----------*/
+.container {
+    position: relative;
+    width: 100%;
+}
+.container:hover {
+    opacity: 1;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #454a4f;
+}
+.overlay:hover{
+    opacity: 0.7;
+}
+#text {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 48%;
+    left: 10%;
+    text-align: center;
+    opacity: 1;
+}
+.text {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    text-align: center;
+    opacity: 1;
+}
+/*--------IMAGE OVERLAY END----------*/
+/*--------MAIN IMAGES END----------*/
+/*--------SEARCH FUNCTION----------*/
+#searchoverlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    background-color: #ffffff;
+    display: none;
+    text-align: center;
+    text-justify: center;
+}
+#searchtext{
+    color: #000000;
+    text-align: center;
+    text-justify: center;
+    border: none;
+    text-decoration: underline;
+    font-size: 14px;
+}
+#search{
+    align-self: center;
+    justify-self: center;
+}
+/*--------SEARCH FUNCTION END----------*/
+/*--------FOOTER----------*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12%;
+}
+.botleft{
+    color: #909293;
+    font-size: 8px;
+    margin-left: 8%;
+    width: 150px;
+}
+.share{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.botright{
+    color: #909293;
+    font-size: 8px;
+    text-align: right;
+    margin-right: 8%;
+}
+.pixpa{
+    color: #909293
+}
+/*--------FOOTER END----------*/
